@@ -25,6 +25,10 @@ namespace wiVersion
 	{
 		return revision;
 	}
+	long GetVersion()
+	{
+		return major * 100 + minor * 10 + revision;
+	}
 	const char* GetVersionString()
 	{
 		return version_string.c_str();

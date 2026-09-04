@@ -80,6 +80,18 @@ namespace wiNetwork
 		return true;
 	}
 
+	bool Destroy(Socket* sock)
+	{
+		if (sock->IsValid())
+		{
+			// Releasing the internal state runs SocketInternal's destructor,
+			// which closes the OS socket handle.
+			sock->internal_state.reset();
+			return true;
+		}
+		return false;
+	}
+
 	bool Send(const Socket* sock, const Connection* connection, const void* data, size_t dataSize)
 	{
 		if (socket != nullptr && sock->IsValid())
