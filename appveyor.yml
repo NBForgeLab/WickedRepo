@@ -3,7 +3,7 @@ branches:
   only:
   - master
   - appveyor
-image: Visual Studio 2019
+image: Visual Studio 2026  # must provide the v145 toolset used by the solution projects
 configuration: Release
 
 before_build:
@@ -15,6 +15,12 @@ build_script:
   - call "../BUILD/x64/Release/OfflineShaderCompiler/OfflineShaderCompiler.exe" hlsl5 hlsl6 spirv shaderdump
   - cd ..
   - msbuild "C:\projects\wickedengine\WickedEngine.sln" /t:rebuild /m /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+
+test_script:
+  # Headless CPU unit tests (no GPU required). A non-zero exit code fails
+  # the CI build. Built by the solution rebuild above via the UnitTests
+  # project (Tests\UnitTests).
+  - cmd: '%APPVEYOR_BUILD_FOLDER%\BUILD\%PLATFORM%\Release\UnitTests\UnitTests.exe'
 
 platform:
   - x64

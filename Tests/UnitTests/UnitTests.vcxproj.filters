@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Test Suites">
+      <UniqueIdentifier>{4a7c1b2d-8e3f-4c9a-b1d5-2f6e8a9c0b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine Modules">
+      <UniqueIdentifier>{7d2e9c41-1a5b-4f83-9c6d-3e8b7a2f5c14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Third Party">
+      <UniqueIdentifier>{2b8f5d63-9c4a-4e17-8d2b-6f1a3c7e9b48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestStubs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TestStubs.cpp" />
+    <ClCompile Include="math_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="intersect_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="archive_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="containers_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="jobsystem_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="event_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="random_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="rectpacker_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="network_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="timer_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="ecs_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="version_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="startupargs_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="spinlock_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="ggcontract_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="performance_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="leak_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+    <ClCompile Include="fademanager_tests.cpp"><Filter>Test Suites</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\WickedEngine\wiArchive.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiECS.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiEvent.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiIntersect.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiJobSystem.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiMath.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiNetwork_Windows.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiRandom.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiRectPacker.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiTimer.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiStartupArguments.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiVersion.cpp"><Filter>Engine Modules</Filter></ClCompile>
+    <ClCompile Include="..\..\WickedEngine\wiFadeManager.cpp"><Filter>Engine Modules</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="third_party\doctest\doctest.h"><Filter>Third Party</Filter></None>
+    <None Include="third_party\doctest\LICENSE.txt"><Filter>Third Party</Filter></None>
+  </ItemGroup>
+</Project>

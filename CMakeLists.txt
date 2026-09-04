@@ -25,7 +25,9 @@ add_subdirectory(WickedEngine)
 
 option(WICKED_TESTS "Build WickedEngine tests" ON)
 if (WICKED_TESTS)
+	enable_testing()
 	add_subdirectory(Tests)
+	add_subdirectory(Tests/UnitTests)
 endif()
 
 option(WICKED_EDITOR "Build WickedEngine editor" ON)
